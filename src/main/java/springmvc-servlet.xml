@@ -17,7 +17,7 @@
     <mvc:default-servlet-handler />
 
     <!-- 支持mvc注解驱动 -->
-    <mvc:annotation-driven />
+    <mvc:annotation-driven enable-matrix-variables="true" />
 
     <!-- 视图解析器 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
@@ -29,5 +29,7 @@
     </bean>
     
     <bean name="/foo" class="com.zhongguo.springmvc01.controller.FooController"></bean>
+    
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"></bean>
     
 </beans>

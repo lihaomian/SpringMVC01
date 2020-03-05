@@ -3,6 +3,8 @@ package com.zhongguo.springmvc01.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.view.JstlView;
 
 @Controller
 public class BarController {
@@ -11,7 +13,6 @@ public class BarController {
 		
 		model.addAttribute("message", "这是通过注解定义的一个控制器中的Action");
 		return "foo/index";
-		
 		
 	}
 
